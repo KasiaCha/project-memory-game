@@ -89,9 +89,7 @@ $('.card').click(function() {
     function cardMatchSuccess(firstCard, secondCard) {
       firstCard.addClass('match');
       secondCard.addClass('match');
-      cardPairsMatched = cardPairsMatched + 1;
-      movesCounter = movesCounter + 1;
-      moveCounter(movesCounter);
+      cardPairsMatched = cardPairsMatched + 1;  
     }
 
 /**
