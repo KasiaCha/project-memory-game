@@ -175,6 +175,7 @@
   background:#C0C0C0;
   cursor: default;
   font-size: 33px;
+  pointer-events: none;
 }
 
 .deck .card.match {
