@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Pirata+One" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <title>Memory Game</title>
+    <link href="app.css" rel="stylesheet">
+  </head>
+  <body>
+
+  <div class="container">
+    <header class="title">
+      <h1>The Witcher Memory Game</h1>
+    </header>
+
+  <section class="score-panel">
+      <ul class="beers">
+        <li><i class="fa fa-beer" id="first-beer"></i></li>
+        <li><i class="fa fa-beer" id="second-beer"></i></li>
+        <li><i class="fa fa-beer" id="third-beer"></i></li>
+      </ul>
+
+    <span class="moves">0</span> <p class="moves-text">Moves</p>
+
+    <div class="restart">
+        <i class="fas fa-redo-alt"></i>
+    </div>
+
+    <div class="timer-container">
+      <ul class="timer">
+        <li class="hours">00</li>
+        <li class="colon-one">:</li>
+        <li class="minutes">00</li>
+        <li class="colon-two">:</li>
+        <li class="seconds">0s</li>
+      </ul>
+    </div>
+
+    <div class="game-over">
+      <div class="game-over-content">
+        <p class="winner-message">Congratulations, you won!</p>
+        <p class="performance-rating"></p>
+        <p class="time-taken"></p>
+        <p class="moves-taken"></p>
+
+        <div class="play-again-button-container">
+          <button class="play-again-button">Play again</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <ul class="deck">
+      <li class="card">
+        <i class="fas fa-chess-knight" id="card_1"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-tree", id="card_2"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-fire" id="card_3"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-map-signs" id="card_4"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-paw" id="card_5"></i>
+      </li>
+      <li class="card">
+        <i class="fab fa-pagelines" id="card_6"></i>
+      </li>
+      <li class="card">
+        <i class="fab fa-studiovinari" id="card_7"></i>
+      </li>
+      <li class="card">
+        <i class="fab fa-sticker-mule" id="card_8"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-map-signs" id="card_9"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-tree" id="card_10"></i>
+      </li>
+      <li class="card">
+        <i class="fab fa-studiovinari" id="card_11"></i>
+      </li>
+      <li class="card">
+        <i class="fab fa-pagelines" id="card_12"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-chess-knight" id="card_13"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-paw" id="card_14"></i>
+      </li>
+      <li class="card">
+        <i class="fab fa-sticker-mule" id="card_15"></i>
+      </li>
+      <li class="card">
+        <i class="fas fa-fire" id="card_16"></i>
+    </ul>
+  </div>
+
+<!-- JAVASCRIPT -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

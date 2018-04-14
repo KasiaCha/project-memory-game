@@ -1,0 +1,450 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(https://www.tapeciarnia.pl/tapety/normalne/241680_gory_chmury_woda_lasy_lecacy_smok.jpg);
+}
+
+.title {
+  font-family: 'Pirata One', cursive;
+  color: #483D8B;
+  text-shadow: 2px 2px 2px #808080;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/*Score Panel*/
+
+.score-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 400px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  color: #483D8B;
+  font-family: 'Pirata One', cursive;
+}
+
+.score-panel .beers {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  margin: 0 10px 0 0;
+  color:#006400;
+}
+
+.score-panel .beers li {
+  list-style: none;
+  display: inline-block;
+}
+
+.timer-container li {
+  list-style: none;
+  display: inline-block;
+}
+
+.score-panel .restart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  cursor: pointer;
+  display: inline;
+}
+
+.moves-text {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.timer-container {
+  float: right;
+  margin-right: 10px;
+}
+
+.timer {
+  display: inline;
+}
+
+.colon-one {
+  visibility: hidden;
+}
+
+.minutes {
+  visibility: hidden;
+}
+
+.colon-two {
+  visibility: hidden;
+}
+
+.hours {
+  visibility: hidden;
+}
+
+.game-over {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+}
+
+/*Game over content*/
+
+.game-over-content {
+  background: url(https://www.tapeciarnia.pl/tapety/normalne/241680_gory_chmury_woda_lasy_lecacy_smok.jpg);
+  margin: 15% auto;
+  padding-left: 25%;
+  padding-right: 25%;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.game-over-content .winner-message {
+  font-family: 'Pirata One', cursive;
+  color:#006400;
+  font-size: 40px;
+  text-align: center;
+}
+
+.game-over-content p {
+  text-align: center;
+  font-family: 'Pirata One', cursive;
+  color: #483D8B;
+  font-size: 25px;
+}
+
+.play-again-button {
+  background-color: #006400;;
+  color: #C0C0C0  ;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  font-family:'Pirata One', cursive;
+  border-radius: 10px;
+}
+
+.play-again-button:hover,
+.play-again-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.play-again-button-container {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/*Deck*/
+
+.deck {
+  width: 600px;
+  min-height: 600px;
+  background: #7B68EE;
+  padding: 32px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deck .card {
+  height: 125px;
+  width: 125px;
+  background: url(http://www.iconninja.com/files/869/969/219/copy-witcher-icon.png)#696969;
+  font-size: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 1s ease-in-out;
+}
+
+.deck .card.open {
+  transform: rotateY(180deg);
+  background:#C0C0C0;
+  cursor: default;
+  font-size: 33px;
+}
+
+.deck .card.match {
+  cursor: default;
+  background: #663399;
+  font-size: 33px;
+}
+
+.deck .card.not-a-match {
+  cursor: default;
+  background: #006400;
+  font-size: 33px;
+}
+
+.deck .card:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+/*Media queries*/
+
+@media screen and (max-width: 380px){
+  .title {
+    font-size:  10px;
+  }
+  .score-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    width: 250px;
+    font-size: 10px;
+  }
+  .score-panel .restart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .score-panel .beers {
+    margin-right: 5px;
+    margin-left: 10px;
+    padding: 1px;
+    display: inline-block;
+    color:#006400;
+  }
+  .timer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+  }
+  .deck {
+    padding: 20px;
+    width: auto;
+    min-height: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .deck .card {
+    background: url(http://www.iconninja.com/ico/64/copy-witcher-216834.ico)#696969;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+  }
+  .deck .card.open {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background:#C0C0C0;
+    cursor: default;
+    font-size: 20px;
+  }
+  .deck .card.not-a-match {
+    cursor: default;
+    background: #006400;
+    font-size: 20px;
+  }
+  .deck .card.match {
+    cursor: default;
+    background: #663399;
+    font-size: 20px;
+  }
+  .game-over-content .winner-message {
+    font-size: 15px;
+  }
+.game-over-content p {
+    font-size: 15px;
+  }
+.play-again-button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 381px) and (max-width: 419px){
+  .title {
+    font-size:  15px;
+  }
+  .deck {
+    padding: 20px;
+    width: auto;
+    min-height: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .deck .card {
+    background: url(http://www.iconninja.com/ico/16/witcher-374100.ico)#696969; 
+    width: 73px;
+    height: 73px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0;
+    border-radius: 5px;
+  }
+  .score-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+  }
+  .score-panel .restart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .score-panel .beers {
+    margin-right: 5px;
+    margin-left: 10px;
+    padding: 1px;
+    display: inline-block;
+    color:#006400;
+  }
+  .timer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+  }
+  .deck .card.open {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background:#C0C0C0;
+    cursor: default;
+    font-size: 20px;
+  }
+  .deck .card.not-a-match {
+    cursor: default;
+    background: #006400;
+    font-size: 20px;
+  }
+  .deck .card.match {
+    cursor: default;
+    background: #663399;
+    font-size: 20px;
+  }
+  .game-over-content .winner-message {
+    font-size: 15px;
+  }
+  .game-over-content p {
+    font-size: 15px;
+  }
+  .play-again-button {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 420px) and (max-width: 680px){
+  .title {
+    font-size:  15px;
+  }
+  .deck {
+    padding: 20px;
+    width: auto;
+    min-height: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .deck .card {
+    background: url(http://www.iconninja.com/ico/16/witcher-374100.ico)#696969;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0;
+    border-radius: 5px;
+  }
+  .score-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+  }
+  .score-panel .restart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .score-panel .beers {
+    margin-right: 5px;
+    margin-left: 10px;
+    padding: 1px;
+    display: inline-block;
+    color:#006400;
+  }
+  .timer-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 5px;
+  }
+ .deck .card.open {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background:#C0C0C0;
+    cursor: default;
+    font-size: 20px;
+  }
+  .deck .card.not-a-match {
+    cursor: default;
+    background: #006400;
+    font-size: 20px;
+  }
+  .deck .card.match {
+    cursor: default;
+    background: #663399;
+    font-size: 20px;
+  }
+  .game-over-content .winner-message {
+    font-size: 15px;
+  }
+  .game-over-content p {
+    font-size: 15px;
+  }
+  .play-again-button {
+    font-size: 15px;
+  }
+}
+          
