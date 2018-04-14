@@ -138,10 +138,7 @@ $('.card').click(function() {
       } else if (movesCounter === 28) {
         $('#second-beer').removeClass('fa fa-beer').addClass('fa fa-beer-o');
         performanceRating = "1 beer";
-      } else if (movesCounter === 38) {
-        $('#third-beer').removeClass('fa fa-beer').addClass('fa fa-beer-o');
-        performanceRating = "0 beers";
-      }
+      } 
     };
 
     /** GAME WON */
