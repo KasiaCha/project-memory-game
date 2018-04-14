@@ -2,7 +2,7 @@
 
 # About the Memory Game
 
-The game tests users memory. The game board consists of sixteen "cards" with different icons arranged in a grid. 
+The game tests users memory. The game board consists of sixteen "cards" with different icons arranged in a grid.
 
 # How to Play:
 
@@ -10,5 +10,6 @@ The game tests users memory. The game board consists of sixteen "cards" with dif
 2. Keep matching up pairs until all cards are matched and faced up.
 3. Match cards properly with less moves and in faster time
 
-# Play The Game
+# Play The Game:
 
+http://htmlpreview.github.io/?https://github.com/KasiaCha/project-memory-game/blob/master/index.html
